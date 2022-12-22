@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="LV4_MasterPages.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function odjava() {
+            return confirm('Jeste li sigurni da se želite odjaviti?');
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:HyperLink ID="HL1" runat="server" NavigateUrl="~/Kalkulator.aspx">Kalkulator</asp:HyperLink>
+            &nbsp&nbsp&nbsp
+            <asp:HyperLink ID="HL2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
+            &nbsp&nbsp&nbsp
+            <asp:HyperLink ID="HL3" runat="server" NavigateUrl="~/Ispis_baze.aspx">Ispis baze</asp:HyperLink>
+            &nbsp&nbsp&nbsp
+            <asp:HyperLink ID="HL4" runat="server" NavigateUrl="~/Preuzimanja.aspx">Preuzimanja</asp:HyperLink>
+            &nbsp&nbsp&nbsp
+            <asp:Button ID="btnOdjava" runat="server" Text="Odjavi me!" OnClientClick="return odjava();"
+                OnClick="btnOdjava_Click" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
